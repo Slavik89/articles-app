@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let article of articlesContent">
+    <div>{{article.title}}</div>
+    <div><img src={{article.image_url}} alt="none" width="600"></div>
+    <a routerLink="/details">Read more</a>
+  </li>
+</ul>

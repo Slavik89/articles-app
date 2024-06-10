@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticlesService } from './services/articles/articles.service';
+import { ArticlesService } from '../../services/articles/articles.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-articles-list',
+  templateUrl: './articles-list.component.html',
+  styleUrl: './articles-list.component.css'
 })
-export class AppComponent implements OnInit {
-  title = 'articles-site';
+export class ArticlesListComponent implements OnInit {
 
   articlesContent!: any[];
 
