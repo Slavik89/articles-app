@@ -5,9 +5,12 @@ import { ArticlesListComponent } from './components/articles-list/articles-list.
 import { ArticleComponent } from './components/article/article.component';
 
 export const routes: Routes = [
-  {path: '', component: ArticlesListComponent},
-  { path: 'details', component: ArticleComponent },
-  {path: '**', component: PageNotFoundComponent}
+  
+  
+  { path: 'articles', component: ArticlesListComponent },     
+  { path: 'articles/:id', component: ArticleComponent },
+  { path: '',   redirectTo: '/articles', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

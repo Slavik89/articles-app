@@ -17,9 +17,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterOutlet
+    BrowserModule,    
+    RouterOutlet,
+    AppRoutingModule
   ],
   providers: [
     provideHttpClient(),

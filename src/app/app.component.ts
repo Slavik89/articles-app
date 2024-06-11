@@ -6,19 +6,9 @@ import { ArticlesService } from './services/articles/articles.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'articles-site';
 
   articlesContent!: any[];
-
-  constructor(public articlesService: ArticlesService) {}
-
-  ngOnInit(): void {    
-    this.articlesService.getAllArticles().subscribe(
-      data => {
-        console.log(this.articlesContent = data.results);
-      }
-    );
-  }
 
 }

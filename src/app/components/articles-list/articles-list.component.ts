@@ -15,9 +15,12 @@ export class ArticlesListComponent implements OnInit {
   ngOnInit(): void {    
     this.articlesService.getAllArticles().subscribe(
       data => {
-        console.log(this.articlesContent = data.results);
+        this.articlesContent = data.results;
       }
     );
+
   }
+
+  
 
 }
