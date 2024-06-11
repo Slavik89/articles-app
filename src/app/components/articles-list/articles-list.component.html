@@ -2,6 +2,6 @@
   <li *ngFor="let article of articlesContent">
     <div>{{article.title}}</div>
     <div><img src={{article.image_url}} alt="none" width="600"></div>
-    <a [routerLink]="['/articles', article.id]">Read more, article id: {{article.id}}</a>
+    <a [routerLink]="['/articles', article.id]" [state]="{ data: article }">Read more, article id: {{article.id}}</a>
   </li>
 </ul>
