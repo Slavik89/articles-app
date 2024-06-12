@@ -11,10 +11,14 @@ export class ArticlesService {
 
   constructor(private http: HttpClient, public firestore: Firestore) { }
 
+  /*
+
   getAllArticles(): Observable<any> {
     return this.http
             .get<any>('https://api.spaceflightnewsapi.net/v4/articles/');
   }
+            
+  */
 
   getArticles() {
     const articlesCollection = collection(this.firestore, 'articles');

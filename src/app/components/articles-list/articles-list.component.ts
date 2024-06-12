@@ -9,22 +9,24 @@ import { ArticlesService } from '../../services/articles/articles.service';
 export class ArticlesListComponent implements OnInit {
 
   articlesContent!: any[];
-  articlesFirebase!: any[];
 
   constructor(public articlesService: ArticlesService) {}
 
   ngOnInit(): void {    
+
+    /*
     this.articlesService.getAllArticles().subscribe(
       data => {
         this.articlesContent = data.results;
         console.log(this.articlesContent);
       }
     );    
+    */
 
     this.articlesService.getArticles().subscribe(
       data => {
-        this.articlesFirebase = data;
-        console.log(this.articlesFirebase);
+        this.articlesContent = data;
+        console.log(this.articlesContent);
       }
     );
   }
