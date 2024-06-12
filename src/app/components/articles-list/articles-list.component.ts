@@ -9,6 +9,7 @@ import { ArticlesService } from '../../services/articles/articles.service';
 export class ArticlesListComponent implements OnInit {
 
   articlesContent!: any[];
+  articlesFirebase!: any[];
 
   constructor(public articlesService: ArticlesService) {}
 
@@ -16,9 +17,16 @@ export class ArticlesListComponent implements OnInit {
     this.articlesService.getAllArticles().subscribe(
       data => {
         this.articlesContent = data.results;
+        console.log(this.articlesContent);
+      }
+    );    
+
+    this.articlesService.getArticles().subscribe(
+      data => {
+        this.articlesFirebase = data;
+        console.log(this.articlesFirebase);
       }
     );
-
   }
 
   

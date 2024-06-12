@@ -8,6 +8,9 @@ import { ArticleComponent } from './components/article/article.component';
 import { RouterOutlet, provideRouter } from '@angular/router';
 import { routes } from './app-routing.module'
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { firebaseConfig } from './../environment/firebase.config';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   ],
   providers: [
     provideHttpClient(),
-    provideRouter(routes)
+    provideRouter(routes),
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirestore(() => getFirestore()),
   ],
   bootstrap: [AppComponent]
 })
