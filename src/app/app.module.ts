@@ -16,6 +16,7 @@ import { FilterPipe } from './pipes/filter/filter.pipe';
 import { TruncatePipe } from './pipes/truncate/truncate.pipe';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MatInputModule } from '@angular/material/input';
     RouterOutlet,
     AppRoutingModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
   ],
   providers: [
     provideHttpClient(),

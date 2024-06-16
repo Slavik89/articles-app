@@ -2,11 +2,24 @@
   <input type="text" matInput name="search" [(ngModel)]="filteredArticle" placeholder="Search your article">  
 </div>
 
-<ul>
+<ul class="list__cards">
   <li *ngFor="let article of articlesContent | filter:filteredArticle;">
-    <div>{{article.title}}</div>
-    <div><img src={{article.image_url}} alt="none" width="600"></div>
-    <div>{{article.description | truncate}}</div>
-    <a [routerLink]="['/articles', article.id]" [state]="{ data: article }">Read more, article id: {{article.id}}</a>
+    <mat-card class="card__class">
+      <mat-card-header>
+        <img mat-card-image src={{article.image_url}} width="300">               
+      </mat-card-header>    
+      <mat-card-title>{{article.title}}</mat-card-title> 
+      <mat-card-content>{{article.description | truncate}}</mat-card-content>
+
+      <!--
+              <div><img src={{article.image_url}} alt="none" width="600"></div>
+              <div>{{article.title}}</div>  
+              <div>{{article.description | truncate}}</div>   
+      -->
+    
+      
+      <a [routerLink]="['/articles', article.id]" [state]="{ data: article }">Read more, article id: {{article.id}}</a>
+    </mat-card>
+
   </li>
 </ul>

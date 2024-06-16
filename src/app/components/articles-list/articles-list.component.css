@@ -1,0 +1,9 @@
+ul.list__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul.list__cards li {
+  width: 300px;
+}
