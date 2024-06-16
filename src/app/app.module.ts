@@ -14,6 +14,8 @@ import { firebaseConfig } from './../environment/firebase.config';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter/filter.pipe';
 import { TruncatePipe } from './pipes/truncate/truncate.pipe';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { TruncatePipe } from './pipes/truncate/truncate.pipe';
     BrowserModule,    
     RouterOutlet,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
   ],
   providers: [
     provideHttpClient(),
     provideRouter(routes),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })
