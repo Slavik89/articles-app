@@ -11,18 +11,24 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { firebaseConfig } from './../environment/firebase.config';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter/filter.pipe';
+import { TruncatePipe } from './pipes/truncate/truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesListComponent,
     ArticleComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FilterPipe,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,    
     RouterOutlet,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideHttpClient(),

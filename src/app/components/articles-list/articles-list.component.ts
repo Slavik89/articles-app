@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from '../../services/articles/articles.service';
+import { FilterPipe } from '../../pipes/filter/filter.pipe';
 
 @Component({
   selector: 'app-articles-list',
@@ -8,6 +9,7 @@ import { ArticlesService } from '../../services/articles/articles.service';
 })
 export class ArticlesListComponent implements OnInit {
 
+  filteredArticle: string = '';
   articlesContent!: any[];
 
   constructor(public articlesService: ArticlesService) {}

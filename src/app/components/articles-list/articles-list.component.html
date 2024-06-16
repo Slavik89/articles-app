@@ -1,7 +1,12 @@
+<div>
+  <input type="text" name="search" [(ngModel)]="filteredArticle" placeholder="Search your article">
+</div>
+
 <ul>
-  <li *ngFor="let article of articlesContent">
+  <li *ngFor="let article of articlesContent | filter:filteredArticle;">
     <div>{{article.title}}</div>
     <div><img src={{article.image_url}} alt="none" width="600"></div>
+    <div>{{article.description | truncate}}</div>
     <a [routerLink]="['/articles', article.id]" [state]="{ data: article }">Read more, article id: {{article.id}}</a>
   </li>
 </ul>
