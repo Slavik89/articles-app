@@ -1,0 +1,26 @@
+
+mat-card.article__container {
+ position: relative;
+}
+
+img.article__image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+mat-card.article__text {
+  margin: 0 100px;
+  position: absolute;
+  top: 180px;
+}
+
+mat-card-title.article__title {
+  margin-bottom: 10px;
+  padding: 10px 16px 20px;
+  text-align: center;
+}
+
+mat-card-content.article__description {
+ text-align: justify;
+}

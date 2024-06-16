@@ -1,4 +1,8 @@
 
+mat-card.articles__input {
+  margin: 20px 50px 10px;
+}
+
 ul.list__cards {
   display: flex;
   flex-wrap: wrap; 
@@ -6,12 +10,14 @@ ul.list__cards {
 }
 
 ul.list__cards li {
-  flex: 1 1 200px;
+  width: 350px;
   list-style-type:none;
 }
 
 mat-card-header.articles__image {
   margin-bottom: 10px;
+  height: 200px;
+  object-fit: cover;
 }
 
 div.articles__date {
@@ -25,4 +31,8 @@ mat-card-title.articles__title {
 
 mat-card-content.articles__description {
  text-align: justify;
+}
+
+mat-card-footer.articles__link {
+  padding: 0 0 16px 16px;
 }

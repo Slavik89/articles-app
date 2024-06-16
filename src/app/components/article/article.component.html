@@ -1,2 +1,10 @@
-<p>{{article.title}}</p>
-<p>{{article.description}}</p>
+
+<mat-card class="article__container">
+  <mat-card-header>
+    <img mat-card-image src={{article.image_url}} width="600" class="article__image">
+  </mat-card-header>
+  <mat-card class="article__text">
+    <mat-card-title class="article__title">{{article.title}}</mat-card-title>
+    <mat-card-content class="article__description">{{article.description}}</mat-card-content>
+  </mat-card>
+</mat-card>
