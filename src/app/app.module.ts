@@ -17,6 +17,8 @@ import { TruncatePipe } from './pipes/truncate/truncate.pipe';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { ConvertDatePipe } from './pipes/convert-date/convert-date.pipe';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { MatCardModule } from '@angular/material/card';
     ArticleComponent,
     PageNotFoundComponent,
     FilterPipe,
-    TruncatePipe
+    TruncatePipe,
+    ConvertDatePipe
   ],
   imports: [
     BrowserModule,    
@@ -34,6 +37,7 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     MatInputModule,
     MatCardModule,
+    MatIconModule
   ],
   providers: [
     provideHttpClient(),

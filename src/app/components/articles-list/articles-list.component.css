@@ -1,9 +1,28 @@
+
 ul.list__cards {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap; 
+  gap: 20px; 
 }
 
 ul.list__cards li {
-  width: 300px;
+  flex: 1 1 200px;
+  list-style-type:none;
+}
+
+mat-card-header.articles__image {
+  margin-bottom: 10px;
+}
+
+div.articles__date {
+  padding: 0 0 10px 20px;
+}
+
+mat-card-title.articles__title {
+  margin-bottom: 10px;
+  padding: 0 16px;
+}
+
+mat-card-content.articles__description {
+ text-align: justify;
 }

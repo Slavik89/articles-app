@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TruncatePipe implements PipeTransform {
 
   // A pipe that truncates the text in the description to 1000 characters in this case
-  transform(text: string, limit: number = 1000): string {
+  transform(text: string, limit: number = 500): string {
     if (!text) {
       return '';
     }

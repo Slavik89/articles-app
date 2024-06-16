@@ -5,20 +5,20 @@
 <ul class="list__cards">
   <li *ngFor="let article of articlesContent | filter:filteredArticle;">
     <mat-card class="card__class">
-      <mat-card-header>
+      <mat-card-header class="articles__image">
         <img mat-card-image src={{article.image_url}} width="300">               
-      </mat-card-header>    
-      <mat-card-title>{{article.title}}</mat-card-title> 
-      <mat-card-content>{{article.description | truncate}}</mat-card-content>
-
-      <!--
-              <div><img src={{article.image_url}} alt="none" width="600"></div>
-              <div>{{article.title}}</div>  
-              <div>{{article.description | truncate}}</div>   
-      -->
-    
+      </mat-card-header>  
+      <div class="articles__date">
+        <mat-icon fontIcon="date_range" class="articles-icon"></mat-icon>
+        {{article.published | convertDate}}
+      </div>
+      <mat-card-title class="articles__title">{{article.title}}</mat-card-title> 
+      <mat-card-content class="articles__description">{{article.description | truncate}}</mat-card-content>    
       
-      <a [routerLink]="['/articles', article.id]" [state]="{ data: article }">Read more, article id: {{article.id}}</a>
+      <a [routerLink]="['/articles', article.id]" [state]="{ data: article }">
+        Read more      
+        <mat-icon fontIcon="forward"></mat-icon>   
+      </a>
     </mat-card>
 
   </li>
