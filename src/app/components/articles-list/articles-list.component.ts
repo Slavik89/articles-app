@@ -18,7 +18,6 @@ export class ArticlesListComponent implements OnInit {
     this.articlesService.getArticles().subscribe(
       data => {
         this.articlesContent = data;
-        console.log(this.articlesContent);
       }
     );
   }
