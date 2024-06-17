@@ -1,9 +1,12 @@
 
 mat-card.articles__input {
   margin: 20px 50px 10px;
+  width: 615px;
 }
 
 mat-card.articles__input > input {
+  display:inline-block;
+  width: 600px;
   height: 30px;
   border-radius: 5px;
   font-size: 18px;
