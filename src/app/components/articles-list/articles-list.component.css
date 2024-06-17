@@ -20,8 +20,17 @@ mat-card-header.articles__image {
   object-fit: cover;
 }
 
-div.articles__date {
-  padding: 0 0 10px 20px;
+div.articles__date {  
+  padding: 0 0 10px 45px;
+  position: relative;
+}
+
+div.articles__date::before {  
+  content: 'date_range';  
+  font-family: 'Material Icons';
+  position: absolute;
+  left: 20px;
+  font-size: larger;
 }
 
 a.article__link {
@@ -32,6 +41,7 @@ a.article__link::after {
   content: 'forward';  
   font-family: 'Material Icons';
   position: absolute;
+  font-size: larger;
 }
 
 mat-card-title.articles__title {
@@ -41,6 +51,7 @@ mat-card-title.articles__title {
 
 mat-card-content.articles__description {
  text-align: justify;
+ margin-bottom: 10px;
 }
 
 mat-card-footer.articles__link {
