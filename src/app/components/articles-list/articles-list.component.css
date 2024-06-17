@@ -3,6 +3,13 @@ mat-card.articles__input {
   margin: 20px 50px 10px;
 }
 
+mat-card.articles__input > input {
+  height: 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 10px;  
+}
+
 ul.list__cards {
   display: flex;
   flex-wrap: wrap; 
