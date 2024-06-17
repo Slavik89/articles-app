@@ -9,4 +9,4 @@ In this application, I created the ability to fetch data about scientific articl
 - description: string (description of the article)
 - image_url: string (link to the article's image)
 
-I also deployed this site on Netlify. [The link is here:](https://articles-site-frb.netlify.app/)
+I also deployed this site on Netlify. [Link to the site:](https://articles-site-frb.netlify.app/)

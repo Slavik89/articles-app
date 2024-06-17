@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from '../../services/articles/articles.service';
+import { Article } from '../../interfaces/article';
 
 @Component({
   selector: 'app-articles-list',
@@ -9,12 +10,13 @@ import { ArticlesService } from '../../services/articles/articles.service';
 export class ArticlesListComponent implements OnInit {
 
   filteredArticle: string = '';
-  articlesContent!: any[];
+  articlesContent!: Article[];
 
   constructor(public articlesService: ArticlesService) {}
 
-  ngOnInit(): void {    
-
+  ngOnInit(): void { 
+    
+    // Getting data about articles from the Firebase
     this.articlesService.getArticles().subscribe(
       data => {
         this.articlesContent = data;

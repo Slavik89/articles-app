@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from '../../interfaces/article';
 
 @Component({
   selector: 'app-article',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
-  article: any;
+  article!: Article;
 
   ngOnInit(): void {   
     this.article = history.state.data;
