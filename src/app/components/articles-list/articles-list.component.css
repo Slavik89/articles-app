@@ -24,6 +24,16 @@ div.articles__date {
   padding: 0 0 10px 20px;
 }
 
+a.article__link {
+  position: relative;
+}
+
+a.article__link::after {
+  content: 'forward';  
+  font-family: 'Material Icons';
+  position: absolute;
+}
+
 mat-card-title.articles__title {
   margin-bottom: 10px;
   padding: 0 16px;

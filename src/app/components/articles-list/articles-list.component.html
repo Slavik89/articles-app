@@ -16,9 +16,8 @@
       <mat-card-title class="articles__title">{{article.title}}</mat-card-title> 
       <mat-card-content class="articles__description">{{article.description | truncate}}</mat-card-content>    
       <mat-card-footer class="articles__link">
-        <a [routerLink]="['/articles', article.id]" [state]="{ data: article }">
-          Read more      
-          <mat-icon fontIcon="forward"></mat-icon>   
+        <a [routerLink]="['/articles', article.id]" [state]="{ data: article }" class="article__link">
+          Read more 
         </a>
       </mat-card-footer>
     </mat-card>

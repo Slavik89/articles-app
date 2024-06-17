@@ -7,8 +7,6 @@ export class FilterPipe implements PipeTransform {
 
   transform(value: any[], typedText: string) {
 
-    console.log(typedText);
-
     // A condition that works for the list of articles before starting the search   
     if (value === undefined || typedText === '') {
       return value;
